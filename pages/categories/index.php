@@ -1,6 +1,10 @@
 <?php
   $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
   $pageTitle = "Manajemen Kategori";
+
+  require_once __DIR__ . '/../../repositories/category-repository.php';
+
+  $categories = getCategories();
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +16,6 @@
   <link rel="stylesheet" href="../../styles/categories/index.css">
 </head>
 <body>
-  <?php
-  $category = ["id" => 1, "name" => "Fiksi", "description" => "Novel dan cerita rekaan", "total_books" => 3];
-  ?>
   <div class="app-shell">
   
   <?php require __DIR__ . '/../../components/admin/sidebar.php';?>
@@ -46,7 +47,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <?php foreach($categories as $index => $category):?>
+                <tr>
                 <td>
                   <div class="cell-primary">
                     <span class="cell-thumb"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></span>
@@ -62,6 +64,7 @@
                   </div>
                 </td>
               </tr>
+              <?php endforeach?>
             </tbody>
           </table>
         </div>
