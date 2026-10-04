@@ -14,3 +14,6 @@ function getCategory() {
   return $category;
 }
 
+function deleteCategory() {
+  return true;
+}
