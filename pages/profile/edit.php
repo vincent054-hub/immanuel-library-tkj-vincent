@@ -26,7 +26,7 @@
     <?php require __DIR__ . '/../../components/admin/topbar.php';?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/profile/update.php">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Akun</div>
             <div class="form-row">
@@ -62,7 +62,7 @@
             </div>
             <div class="form-actions">
               <button type="button" class="btn btn-outline">Batal</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+              <button type="submit" class="btn btn-primary" name="update">Simpan Perubahan</button>
             </div>
           </div>
         </form>
