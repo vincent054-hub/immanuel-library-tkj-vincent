@@ -5,7 +5,9 @@ $id = $_GET['id'] ?? null;
 
 if ($id) {
     deleteBook($id);
-    die("delete success");
+    echo "delete success";
+    print_r($_GET);
+    exit;
 }
 
 header("Location: ../../pages/books/index.php");

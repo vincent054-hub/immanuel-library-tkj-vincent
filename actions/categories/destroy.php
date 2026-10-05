@@ -5,8 +5,10 @@ $id = $_GET['id'] ?? null;
 
 if ($id) {
     deleteCategory($id);
-    die("delete success");
+    echo "delete success";
+    print_r($_GET);
+    exit;
 }
 
-header("Location: ../../pages/books/index.php");
+header("Location: ../../pages/categories/index.php");
 exit;

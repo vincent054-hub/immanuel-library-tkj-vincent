@@ -1,6 +1,10 @@
 <?php
  $pageTitle = "Manajemen Penulis";
  $pageSubtitle = "Kelola data penulis yang terdaftar di sistem";
+
+ require_once __DIR__ . '/../../repositories/author-repository.php';
+
+ $authors = getAuthors();
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +16,6 @@
   <link rel="stylesheet" href="../../styles/authors/index.css">
 </head>
 <body>
-  <?php
-  $author = ["id" => 1, "name" => "Andrea Hirata", "total_books" => 1];
-  ?>
   <div class="app-shell">
   
   <?php require __DIR__ . '/../../components/admin/sidebar.php';?>
@@ -45,7 +46,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <?php foreach($authors as $index => $author):?>
+                <tr>
                 <td>
                   <div class="cell-primary">
                     <span class="cell-thumb"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
@@ -60,6 +62,12 @@
                   </div>
                 </td>
               </tr>
+              <?php endforeach?>
+              <?php if(count($authors) < 1):?>
+                <tr>
+                  <td style="text-align: center;" colspan="5">Tidak ada data buku yang ditemukan</td>
+                </tr>
+              <?php endif?> 
             </tbody>
           </table>
         </div>
