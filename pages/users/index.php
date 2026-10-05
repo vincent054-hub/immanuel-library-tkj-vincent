@@ -1,6 +1,10 @@
 <?php
   $pageSubtitle = "Daftar seluruh pengguna beserta perannya";
   $pageTitle = "Manajemen Pengguna";
+
+  require_once __DIR__ . '/../../repositories/user-repository.php';
+
+  $users = getUsers();
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +16,6 @@
   <link rel="stylesheet" href="../../styles/users/index.css">
 </head>
 <body>
-  <?php
-  $user = ["id" => 2, "name" => "Budi Santoso", "email" => "budi.santoso@siswa.ski.sch.id", "role" => "member"];
-  ?>
   <div class="app-shell">
   
   <?php require __DIR__ . '/../../components/admin/sidebar.php';?>
@@ -46,7 +47,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <?php foreach($users as $index => $user):?>
+                <tr>
                 <td>
                   <div class="cell-primary">
                     <span class="cell-thumb"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 19.5v-1a4.5 4.5 0 0 0-4.5-4.5h-5A4.5 4.5 0 0 0 5 18.5v1"/><circle cx="12" cy="7.5" r="4"/></svg></span>
@@ -68,6 +70,7 @@
                   </div>
                 </td>
               </tr>
+              <?php endforeach?>
             </tbody>
           </table>
         </div>
