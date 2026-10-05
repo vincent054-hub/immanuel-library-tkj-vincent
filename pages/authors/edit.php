@@ -1,6 +1,10 @@
 <?php
  $pageTitle = "Edit Penulis";
  $pageSubtitle = "Pebarui data penulis";
+
+ require_once __DIR__ . '/../../repositories/author-repository.php';
+
+ $author = getAuthor();
 ?>
 
 <!DOCTYPE html>
@@ -14,13 +18,6 @@
 </head>
 
 <body>
-  <?php
-  $author = [
-    "id" => 1,
-    "name" => "Andrea Hirata",
-    "bio" => "Penulis asal Belitung, dikenal lewat novel Laskar Pelangi.",
-  ];
-  ?>
   <div class="app-shell">
     
     <?php require __DIR__ . '/../../components/admin/sidebar.php';?>

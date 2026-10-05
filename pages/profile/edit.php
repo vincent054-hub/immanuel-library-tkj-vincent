@@ -1,6 +1,11 @@
 <?php
   $pageSubtitle = "Kelola data akun dan profil anda";
   $pageTitle = "Profil Saya";
+
+  require_once __DIR__ . '/../../repositories/user-repository.php';
+
+  $user = getUser();
+  $profile = getProfile();
 ?>
 
 <!DOCTYPE html>
@@ -12,21 +17,6 @@
   <link rel="stylesheet" href="../../styles/profile/edit.css">
 </head>
 <body>
-  <?php
-  $user = [
-      "id"    => 1,
-      "name"  => "Budi Santoso",
-      "email" => "budi.santoso@siswa.ski.sch.id",
-      "role"  => "member",
-  ];
-
-  $profile = [
-      "user_id" => 1,
-      "phone"   => "0812-3456-7890",
-      "address" => "Jl. Merdeka No. 21, Pontianak, Kalimantan Barat",
-      "bio"     => "Murid kelas XI TKJ yang gemar membaca novel fiksi dan buku pengembangan diri.",
-  ];
-  ?>
   <div class="app-shell">
   
   <?php require __DIR__ . '/../../components/admin/sidebar.php';?>
