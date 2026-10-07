@@ -60,6 +60,6 @@
   return $book;
   }
 
-  function deleteBook($id) {
+  function deleteBook() {
     return true;
   }
