@@ -57,7 +57,7 @@
                 <select id="category_id" name="category_id">
                   <?php foreach ($categories as $category): ?>
                     <option value="<?= $category['id'] ?>" <?= ($category['id']) == ($book['category_id'] ?? '') ? 'selected' : '' ?>><?= $category['name'] ?></option>
-                  <?php endforeach; ?>
+                  <?php endforeach;?>
                 </select>
               </div>
             </div>
@@ -78,7 +78,7 @@
                     <input type="checkbox" name="author_ids[]" value="<?= $authorId ?>" <?= in_array($authorId, $book['author_ids'] ?? []) ? 'checked' : '' ?>>
                     <?= $authorName['name'] ?>
                   </label>
-                <?php endforeach; ?>
+                <?php endforeach;?>
               </div>
             </div>
 
