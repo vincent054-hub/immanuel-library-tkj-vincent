@@ -23,6 +23,5 @@ function getProfile() {
   ];
   return $profile;
 }
-
 ?>
 

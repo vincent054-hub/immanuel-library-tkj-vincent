@@ -13,5 +13,4 @@ function getCategory() {
   $category = ["id" => 1, "name" => "Fiksi",     "description" => "Novel dan cerita rekaan",        "total_books" => 3];
   return $category;
 }
-
 ?>
