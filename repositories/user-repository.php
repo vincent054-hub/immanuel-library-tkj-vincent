@@ -24,7 +24,5 @@ function getProfile() {
   return $profile;
 }
 
-function deleteUser() {
-  return true;
-}
+?>
 

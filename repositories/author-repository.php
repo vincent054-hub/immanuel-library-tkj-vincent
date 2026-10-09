@@ -19,7 +19,5 @@ function getAuthor() {
   return $author;
 }
 
-function deleteAuthor() {
-  return true;
-}
+?>
 

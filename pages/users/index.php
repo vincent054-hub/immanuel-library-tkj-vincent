@@ -66,7 +66,7 @@
                 <td>
                   <div class="cell-actions">
                     <a href="edit.php?id=<?= $user['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                    <a href="../../actions/users/destroy.php?destroy=<?= $user['id'] ?>" class="btn btn-danger btn-sm" name="destroy">Hapus</a>
+                    <a href="../../actions/users/destroy.php?destroy=<?= $user['id']?>" class="btn btn-danger btn-sm" name="destroy">Hapus</a>
                   </div>
                 </td>
               </tr>

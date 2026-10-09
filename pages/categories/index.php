@@ -60,7 +60,7 @@
                 <td>
                   <div class="cell-actions">
                     <a href="edit.php?id=<?= $category['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                    <a href="../../actions/categories/destroy.php?destroy=<?= $category['id'] ?>" class="btn btn-danger" name="destroy">Hapus</a>
+                    <a href="../../actions/categories/destroy.php?destroy=<?= $category['id']?>" class="btn btn-danger" name="destroy">Hapus</a>
                   </div>
                 </td>
               </tr>

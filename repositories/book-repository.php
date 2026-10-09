@@ -60,6 +60,5 @@
   return $book;
   }
 
-  function deleteBook() {
-    return true;
-  }
+  ?>
+
